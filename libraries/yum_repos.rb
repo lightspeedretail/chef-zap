@@ -20,7 +20,7 @@
 # limitations under the License.
 #
 
-require_relative 'default.rb'
+require File.expand_path('default.rb', File.dirname(__FILE__))
 
 # zap_yum_repos '/etc/yum.repos.d'
 class Chef

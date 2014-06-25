@@ -45,19 +45,19 @@ class Chef
     end
 
     def pattern(arg = nil)
-      set_or_return(:pattern, arg, kind_of: String)
+      set_or_return(:pattern, arg, :kind_of => String)
     end
 
     def filter(&block)
-      set_or_return(:filter, block, kind_of: Proc)
+      set_or_return(:filter, block, :kind_of => Proc)
     end
 
     def collect(&block)
-      set_or_return(:collect, block, kind_of: Proc)
+      set_or_return(:collect, block, :kind_of => Proc)
     end
 
     def select(&block)
-      set_or_return(:select, block, kind_of: Proc)
+      set_or_return(:select, block, :kind_of => Proc)
     end
 
     def delayed(arg = nil)
@@ -72,11 +72,11 @@ class Chef
     end
 
     def klass(arg = nil)
-      set_or_return(:klass, arg, kind_of: [Array, Class, String])
+      set_or_return(:klass, arg, :kind_of => [Array, Class, String])
     end
 
     def immediately(arg = nil)
-      set_or_return(:immediately, arg, equal_to: [true, false], default: false)
+      set_or_return(:immediately, arg, :equal_to => [true, false], :default => false)
     end
   end
 

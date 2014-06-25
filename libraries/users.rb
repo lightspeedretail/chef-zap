@@ -21,7 +21,7 @@
 #
 
 require 'etc'
-require_relative 'default.rb'
+require File.expand_path('default.rb', File.dirname(__FILE__))
 
 # zap_users '/etc/passwd'
 class Chef

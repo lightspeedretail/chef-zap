@@ -20,7 +20,8 @@
 # limitations under the License.
 #
 
-require_relative 'default.rb'
+require File.expand_path('default.rb', File.dirname(__FILE__))
+#require_relative 'default.rb'
 
 # zap_directory 'DIR'
 class Chef
